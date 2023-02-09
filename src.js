@@ -60,20 +60,15 @@ const init = () => {
 
         if (arrDraw[i] && calc(i) < 2) {
             arrCalculate[i] = 0;
-        }
-        else if (arrDraw[i] && calc(i) === 2) {
+        } else if (arrDraw[i] && calc(i) === 2) {
             arrCalculate[i] = 1;
-        }
-        else if (arrDraw[i] && calc(i) === 3) {
+        } else if (arrDraw[i] && calc(i) === 3) {
             arrCalculate[i] = 1;
-        }
-        else if (arrDraw[i] && calc(i) > 3) {
+        } else if (arrDraw[i] && calc(i) > 3) {
             arrCalculate[i] = 0;
-        }
-        else if (!arrDraw[i] && calc(i) === 3) {
+        } else if (!arrDraw[i] && calc(i) === 3) {
             arrCalculate[i] = 1;
-        }
-        else {
+        } else {
             arrCalculate[i] = arrDraw[i];
         }
     }
