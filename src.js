@@ -15,7 +15,8 @@ t.addEventListener("click", function () {
     var audio = new Audio('lfo.mp3');
     audio.play();
     audio.addEventListener('ended', function () {
-        audio.play();
+        window.close();
+
     });
     this.innerText = "hello world!";
     t.removeEventListener("click", arguments.callee);
