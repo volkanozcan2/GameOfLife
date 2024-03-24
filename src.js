@@ -15,12 +15,15 @@ t.addEventListener("click", function () {
     var audio = new Audio('lfo.mp3');
     audio.play();
     audio.addEventListener('ended', function () {
-        window.close();
+        audio.pause();
+        document.body.classList.add("fadeout");
+        body.style.backgroundColor = "#000";
+        clearInterval(timer);
 
     });
     this.innerText = "hello world!";
     t.removeEventListener("click", arguments.callee);
-    setInterval(() => {
+    let timer = setInterval(() => {
         t.style.fontFamily = f[~~(Math.random() * f.length)];
         t.style.color = "#" + c[~~(Math.random() * c.length)];
         document.body.style.backgroundColor = "#" + c[~~(Math.random() * c.length)];

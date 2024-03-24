@@ -1,12 +1,45 @@
 @import url("https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Gochi+Hand&family=Homemade+Apple&family=Nerko+One&family=Pacifico&family=Permanent+Marker&family=Sriracha&display=swap");
 
+body {
+    background-color: rgb(8, 5, 5);
+    color: white;
+}
+
+/* center t vertical and horizontal */
+#foo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#t {
+    white-space: -moz-pre-wrap;
+    /* Firefox */
+    white-space: -o-pre-wrap;
+    /* Opera */
+    white-space: pre-wrap;
+    /* Chrome */
+    word-wrap: break-word;
+    /* IE */
+}
+
+body.fadeout {
+    opacity: 0;
+    background-color: black;
+    transition: opacity 1s ease;
+    transition: background-color 1s ease;
+
+
+}
+
 h1 {
     font-size: 20vh;
     text-shadow: 2px 2px rgb(31, 24, 24);
     text-align: center;
     width: 100%;
     cursor: default;
-    filter: hue-rotate(90deg);
 
 }
 
@@ -15,4 +48,14 @@ h1 {
     user-select: none;
     /* Hide scrollbars and disable selection*/
 
+}
+
+.vignette {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 200px rgba(0, 0, 0, 0.9) inset;
+    z-index: -9999;
 }
