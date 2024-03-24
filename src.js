@@ -17,7 +17,7 @@ t.addEventListener("click", function () {
     audio.addEventListener('ended', function () {
         audio.pause();
         document.body.classList.add("fadeout");
-        body.style.backgroundColor = "#000";
+        document.body.style.backgroundColor = "#000";
         clearInterval(timer);
 
     });
